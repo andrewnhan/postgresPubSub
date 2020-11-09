@@ -1,2 +1,2 @@
-./postgresLister/node_modules
-./postgresPublisher/node_modules
+postgresListener/node_modules
+postgresPublisher/node_modules

@@ -1,0 +1,15 @@
+CREATE OR REPLACE FUNCTION notify_new_generic_row()
+	RETURNS trigger AS
+$$
+BEGIN
+	PERFORM pg_notify('new_generic_row', row_to_json(NEW)::text);
+	RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+
+CREATE TRIGGER notify_new_generic_row
+	AFTER INSERT
+	ON generic_rows
+	FOR EACH ROW
+EXECUTE PROCEDURE notify_new_generic_row();

@@ -1,0 +1,14 @@
+{
+  "name": "postgreslistener",
+  "version": "1.0.0",
+  "description": "Listener for postgres notify triggers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.4.2"
+  }
+}
